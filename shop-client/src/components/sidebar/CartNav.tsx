@@ -1,10 +1,13 @@
 import React from "react";
 import Bottle from "../../assets/source.svg";
 import { FaPen } from "react-icons/fa";
+import { useAddItemStore } from "../../store/addItemStore";
 
 export default function CartNav() {
+  const { setShowContainer } = useAddItemStore();
+
   return (
-    <div className="min-h-screen sticky w-[400px] flex flex-col">
+    <div className="min-h-screen sticky max-w-[350px] flex flex-col">
       <div className="bg-[#FFF0DE] p-8 grow">
         <div className="relative bg-[#80485B] p-4 rounded-2xl">
           <img src={Bottle} className="absolute -top-4" />
@@ -12,7 +15,10 @@ export default function CartNav() {
             <div className="text-white text-lg leading-[18px]">
               Didn't find what you need?
             </div>
-            <div className="bg-white w-fit py-2 px-6 rounded-lg font-semibold mt-4">
+            <div
+              className="bg-white w-fit py-2 px-6 rounded-lg font-semibold mt-4"
+              onClick={() => setShowContainer(true)}
+            >
               Add item
             </div>
           </div>

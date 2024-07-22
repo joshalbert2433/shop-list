@@ -13,3 +13,13 @@ export const getAllProducts = async () => {
         console.log(error)
     }
 }
+
+export const getCategories = async () => {
+    try {
+        const res = await ShopAPI.get("/products/categories")
+        return res.data
+    } catch (error) {
+        console.log(error)
+    }
+}
+

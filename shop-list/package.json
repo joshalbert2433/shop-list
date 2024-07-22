@@ -19,7 +19,7 @@
   },
   "type": "commonjs",
   "scripts": {
-    "start": "ts-node src/app.ts",
+    "start": "nodemon src/app.ts",
     "watch": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
